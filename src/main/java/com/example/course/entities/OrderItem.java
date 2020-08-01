@@ -6,7 +6,7 @@ import javax.persistence.EmbeddedId;
 import javax.persistence.Entity;
 import javax.persistence.Table;
 
-import com.example.course.entities.pk.OrdemItemPK;
+import com.example.course.entities.pk.OrderItemPK;
 
 @Entity
 @Table(name = "tb_order_item")
@@ -14,7 +14,7 @@ public class OrderItem implements Serializable {
 	private static final long serialVersionUID = 1L;
 	
 	@EmbeddedId	
-	private OrdemItemPK id;
+	private OrderItemPK id = new OrderItemPK();
 	
 	private Integer quantity;
 	private Double price;
